@@ -10,13 +10,6 @@
 # DATE and TIME: 7/11/2020 ,  6.08 PM (IST) 
 # DAY: SATURDAY
 
-#THIS IS PYTHON AUTOMATION SCRIPT WRITTEN BY 
-# - RAHUL SIL (Hadoop Services)
-# - JYOTI PANJWANI (AWS Services) 
-# - YASH GUPTA (Docker Services)
-# - NILESH CHOUBISA (Web Server)
-# ARTH GROUP NO: 4.9
-
 import os
 import time
 import subprocess
@@ -857,7 +850,9 @@ def docker_launch_any_env():
 	os.system("sudo docker run -dit --network host --name {} {}:{}".format(con_name,img_name,img_version))
 	os.system("sudo docker exec -it {} yum install {} -y".format(con_name,what_to_install))
 	os.system("sudo docker exec -it {} {}".format(con_name,what_to_execute))
-		
+	
+	
+	
 		
 #docker_main_menu_quit()
 def docker_main_menu_quit():
@@ -945,6 +940,8 @@ def docker():
 	
 	os.system("tput setaf 7")
 
+	
+	
 	#docker()									
 def webserver():
 	
@@ -1004,5 +1001,7 @@ Press 5: to go back to webserver menu\n""")
 				return webserver()
 		elif int(ch) == 5:
 			return mainaws()
+		
 		os.system("tput setaf 7")
+
 mainaws()
