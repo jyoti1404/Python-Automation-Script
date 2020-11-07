@@ -10,8 +10,13 @@
 # DATE and TIME: 7/11/2020 ,  6.08 PM (IST) 
 # DAY: SATURDAY
 
-import os
-import aws
+#THIS IS PYTHON AUTOMATION SCRIPT WRITTEN BY 
+# - RAHUL SIL (Hadoop Services)
+# - JYOTI PANJWANI (AWS Services) 
+# - YASH GUPTA (Docker Services)
+# - NILESH CHOUBISA (Web Server)
+# ARTH GROUP NO: 4.9
+
 import os
 import time
 import subprocess
@@ -728,8 +733,6 @@ def docker_services():
 			return docker()
 		else:
 			print(" NOT SUPPORTED VALUE ") 
-			
-			
 #docker_configure()
 def docker_configure():	
 	def docker_terminate():
@@ -942,11 +945,7 @@ def docker():
 	
 	os.system("tput setaf 7")
 
-	#docker()
-
-
-
-											
+	#docker()									
 def webserver():
 	
 	while True:
@@ -977,14 +976,15 @@ The Apache HTTP Server ("httpd") was launched in 1995 and it has been the most p
 			print("""\nPress 1: launch Webserver locally
 Press 2: launch Webserver remotely
 Press 3: launch Webserver on docker
-Press 4: launch Webserver on AWS\n""")
+Press 4: launch Webserver on AWS
+Press 5: to go back to webserver menu\n""")
 			os.system("tput setaf 7")
 			ch=input("Enter Your Choice: ")
 			x = "$PWD"
 			if int(ch)  == 1:
 				os.system("tput setaf 13")
 				os.system("systemctl start httpd")
-				os.system("systemctl status")
+				os.system("systemctl status httpd")
 			elif int(ch) == 2:
 				print("Enter Host IP, username and password")
 				ip = input("IP :")
@@ -1000,9 +1000,9 @@ Press 4: launch Webserver on AWS\n""")
 				os.system("tput setaf 13")
 				print("Will be update in Next Sprint...")
 				os.system("tput setaf 7")
+			elif int(ch) == 5:
+				return webserver()
 		elif int(ch) == 5:
 			return mainaws()
-		
 		os.system("tput setaf 7")
-		
 mainaws()
