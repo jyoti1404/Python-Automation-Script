@@ -3,9 +3,12 @@
 # - JYOTI PANJWANI (AWS Services) 
 # - YASH GUPTA (Docker Services)
 # - NILESH CHOUBISA (Web Server)
+# ARTH - THE SCHOOL OF TECHNOLOGIES 
 # ARTH GROUP NO: 4.9
 # THIS TASK IS GIVEN BY 
-# VIMAL DAGA SIR
+# - VIMAL DAGA SIR
+# DATE and TIME: 7/11/2020 ,  6.08 PM (IST) 
+# DAY: SATURDAY
 
 import os
 import aws
@@ -725,6 +728,8 @@ def docker_services():
 			return docker()
 		else:
 			print(" NOT SUPPORTED VALUE ") 
+			
+			
 #docker_configure()
 def docker_configure():	
 	def docker_terminate():
@@ -997,5 +1002,7 @@ Press 4: launch Webserver on AWS\n""")
 				os.system("tput setaf 7")
 		elif int(ch) == 5:
 			return mainaws()
+		
 		os.system("tput setaf 7")
+		
 mainaws()
